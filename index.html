@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather_Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <h1 class="main-heading">SkyCast<span class="app-sub">: Weather App</span></h1>
+    
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Search for any city...">
+            <button onclick="getWeather()">Search</button>
+        </div>
+        <div class="error" id="error"></div>
+        <div class="loading" id="loading">Fetching Weather data...</div>
+
+        <div class="weather-info" id="weather-info" >
+            <div class="current-weather">
+                <div>
+                    <h1 class="city-name" id="city-name">City Name</h1>
+                    <p class="region" id="region"></p>
+                    <p class="date" id="date">Date</p>
+                    <p class="weather-description" id="weather-description">Weather Description</p>
+                </div>
+                <div>
+                    <h2 class="temperature" id="temperature" style="display:inline-block"></h2>
+                    <img src="/api/placeholder/120/120" alt="WeatherIcon" id="weather-icon" class="weather-icon">
+                    <div id="max-min_temp">
+                    <span id="min-temp">
+                        <img src="icons/min_temp.png" class="icon" alt="min_temp">
+                        <span id="min-temp_value"></span>
+                    </span>
+                    <span id="max-temp">
+                        <img src="icons/max_temp.png" class="icon" alt="max_temp">
+                        <span id="max-temp_value"></span>
+                    </span>
+                    </div>
+                    <div id="sun">
+                        <span id="sunrise">
+                        <img src="icons/sunrise.svg" class="icon" alt="Sunrise">
+                        <span id="sunrise_time"></span>
+                        </span>
+                        <span id="sunset">
+                        <img src="icons/sunset.svg" class="icon" alt="Sunset">
+                        <span id="sunset_time"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="weather-details">
+                <div class="detail-box">
+                    <h3>Feels Like</h3>
+                    <p id="feels-like">0</p>
+                </div>
+                <div class="detail-box">
+                    <h3>Humidity</h3>
+                    <p id="Humidity">0%</p>
+                </div>
+                <div class="detail-box">
+                    <h3>Wind Speed</h3>
+                    <p id="wind-speed">0 km/h</p>
+                </div>
+                <div class="detail-box">
+                    <h3>UV Index</h3>
+                    <p id="uv-index"></p>
+                </div>
+            </div>
+            <div class="forecast-container">
+                <h2 class="section-title">ForeCast</h2>
+                <div class="forecast" id="forecast"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html> 
